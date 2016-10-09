@@ -7,7 +7,7 @@ I decided to make an HTML5 runner(something is chasing you and you just run) gam
 This is mostly to establish a better understanding of how CANVAS and WebGl can be used to make a browser game.
 
 ##Under construction
-
+The game is under construction.
 
 ##Resources
 https://www.youtube.com/watch?v=S256vAqGY6c
