@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "I decided to make an HTML5 runner(something is chasing you and you just run) game. You run from an angry mob while steeling their weets, because there are worse ways than solving gluten related issues.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {    
+    "dev": "lite-server"
   },
   "repository": {
     "type": "git",
