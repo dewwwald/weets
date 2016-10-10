@@ -50,9 +50,11 @@ const Platform = (function () {
 
 	init = function (cvs) 
 	{
-		var d = 0;
-		var velocity = 1000;
-		var delta = 0;
+		var dX = 0;
+		var dY = 0;
+		var velocity = 100;
+		var deltaX = 0;
+		var deltaY = 0;
 		var add = true;
 		var subtract = false;
 
@@ -63,19 +65,23 @@ const Platform = (function () {
 			function () {
 				if (add)
 				{
-					delta = (velocity / fps);
-					d += delta;
-					add = d + 20 <= canvas.width;
+					deltaX = (velocity / fps);
+					deltaY = (velocity / fps);
+					dX += deltaX;
+					dY += deltaY;
+					add = dX + 20 <= canvas.width && dY + 20 <= canvas.height;
 					subtract = !add;
 				}
 				else if (subtract)
 				{
-					delta = velocity / fps
-					d -= delta;					
-					subtract = d + 20 >= 0;
+					deltaX = velocity / fps
+					deltaY = velocity / fps
+					dX -= deltaX;
+					dY -= deltaY;
+					subtract = dY + 20 >= 0 && dY + 20 >= 0;
 					add = !subtract;
 				}
-				context.fillRect(d,d,20,20);
+				context.fillRect(dX,dY,20,20);
 			}
 		];
 	}
